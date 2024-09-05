@@ -49,16 +49,18 @@ public abstract interface UserRegisterationComponent {
        }
 
    4. Main activity inject requried the dependency
+  
+   
             class MainActivity : AppCompatActivity() {
-           val component = DaggerUserRegisterationComponent.builder().build()
-          private lateinit var mainBinding: ActivityMainBinding
-          override fun onCreate(savedInstanceState: Bundle?) {
-              super.onCreate(savedInstanceState)
-              mainBinding = ActivityMainBinding.inflate(layoutInflater)
-              setContentView(mainBinding.root)
-              val userRegistrationService = component.getUserRegisterationService()
-              userRegistrationService.registerUser("dummy@gmail.com","123456")
-              val emailService = component.getEmailService()
-               emailService.sent("john@gmail.com", "dummy@gmail.com","dummy")
+               val component = DaggerUserRegisterationComponent.builder().build()
+                private lateinit var mainBinding: ActivityMainBinding
+            override fun onCreate(savedInstanceState: Bundle?) {
+                super.onCreate(savedInstanceState)
+                mainBinding = ActivityMainBinding.inflate(layoutInflater)
+                setContentView(mainBinding.root)
+                val userRegistrationService = component.getUserRegisterationService()
+                userRegistrationService.registerUser("dummy@gmail.com","123456")
+                val emailService = component.getEmailService()
+                 emailService.sent("john@gmail.com", "dummy@gmail.com","dummy")
+              }
           }
-      }
