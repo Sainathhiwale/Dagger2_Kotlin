@@ -5,7 +5,7 @@ import android.os.Bundle
 import com.examen.dagger2_kotlin.databinding.ActivityMainBinding
 import javax.inject.Inject
 
-// Field Injection Dependency
+// Dagger 2 Component Factory with @BindsInstance
 class MainActivity : AppCompatActivity() {
      @Inject
      lateinit var userRegistrationService: UserRegistrationService
