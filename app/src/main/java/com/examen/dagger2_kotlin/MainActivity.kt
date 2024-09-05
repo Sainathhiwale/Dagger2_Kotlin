@@ -10,8 +10,7 @@ class MainActivity : AppCompatActivity() {
      @Inject
      lateinit var userRegistrationService: UserRegistrationService
      // consumer request dependency to component
-     @Inject
-     lateinit var  emailService: EmailService
+
 
 
     private lateinit var mainBinding: ActivityMainBinding
@@ -22,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         val component = DaggerUserRegisterationComponent.builder().build()
         component.injectMainActivity(this)
         userRegistrationService.registerUser("dummy@gmail.com","123456")
-        emailService.sent("john@gmail.com","dummy@gmail.com","dummy")
 
     }
 }
