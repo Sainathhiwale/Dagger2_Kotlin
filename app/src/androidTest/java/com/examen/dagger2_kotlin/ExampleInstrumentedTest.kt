@@ -1,4 +1,4 @@
-package com.examen.kotlinsample
+package com.examen.dagger2_kotlin
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.examen.kotlinsample", appContext.packageName)
+        assertEquals("com.examen.dagger2_kotlin", appContext.packageName)
     }
 }

@@ -1,4 +1,4 @@
-package com.examen.kotlinsample
+package com.examen.dagger2_kotlin
 
 class UserRegistrationService (private val userRepository:UserRepository, private  val emailService:EmailService){
 

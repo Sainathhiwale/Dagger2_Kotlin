@@ -1,9 +1,8 @@
-package com.examen.kotlinsample
+package com.examen.dagger2_kotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import com.examen.kotlinsample.databinding.ActivityMainBinding
+import com.examen.dagger2_kotlin.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {

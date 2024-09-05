@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.examen.kotlinsample"
+    namespace = "com.examen.dagger2_kotlin"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.examen.kotlinsample"
+        applicationId = "com.examen.dagger2_kotlin"
         minSdk = 23
         targetSdk = 34
         versionCode = 1
