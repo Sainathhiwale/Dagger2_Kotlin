@@ -3,14 +3,16 @@ package com.examen.dagger2_kotlin
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import javax.inject.Named
 
 @Module()
  class UserRepositoryModule {
 
-   /* @Provides
+     @Named("SQLRepository")
+    @Provides
     fun provideSqlRepository():UserRepository{
         return SQLRepository()
-    }*/
+    }
 
 
     @Provides
