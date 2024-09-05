@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.examen.dagger2_kotlin.databinding.ActivityMainBinding
 
-
+// manual dependency injection
 class MainActivity : AppCompatActivity() {
     private lateinit var mainBinding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
