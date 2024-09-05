@@ -13,7 +13,7 @@ class EmailService @Inject constructor(): NotificationServices{
     }
 }
 
-class MessageService : NotificationServices{
+class MessageService @Inject constructor(): NotificationServices{
     override fun sent(to: String, from: String, body: String) {
         Log.d("MessageService", "sent: ")
     }
