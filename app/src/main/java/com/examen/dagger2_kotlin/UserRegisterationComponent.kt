@@ -2,7 +2,7 @@ package com.examen.dagger2_kotlin
 
 import dagger.Component
 
-@Component
+@Component(modules = [NotificationServicesModule::class, UserRepositoryModule::class])
 interface UserRegisterationComponent {
 
    // consumer

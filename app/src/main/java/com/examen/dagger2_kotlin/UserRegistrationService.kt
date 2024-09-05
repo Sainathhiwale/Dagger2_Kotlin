@@ -3,11 +3,13 @@ package com.examen.dagger2_kotlin
 import javax.inject.Inject
 
 
-class UserRegistrationService @Inject constructor(private val userRepository:UserRepository,
-                                                  private  val emailService:EmailService){
+class UserRegistrationService @Inject constructor(
+    private val userRepository:UserRepository,
+    private  val notificationServices: NotificationServices
+  ) {
 
     fun registerUser(email:String,password:String){
         userRepository.saveUser(email,password)
-        emailService.sent(email,"sainath@gmail.com","Hello")
+        notificationServices.sent(email,"sainath@gmail.com","Hello")
     }
 }
