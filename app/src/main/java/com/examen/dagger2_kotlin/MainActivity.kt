@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.examen.dagger2_kotlin.databinding.ActivityMainBinding
 
-// manual dependency injection
+// Field Injection Dependency
 class MainActivity : AppCompatActivity() {
      val component = DaggerUserRegisterationComponent.builder().build()
     private lateinit var mainBinding: ActivityMainBinding
