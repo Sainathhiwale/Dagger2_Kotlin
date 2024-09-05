@@ -1,10 +1,11 @@
 package com.examen.dagger2_kotlin
 
 import javax.inject.Inject
+import javax.inject.Named
 
 
 class UserRegistrationService @Inject constructor(
-    private val userRepository:UserRepository,
+   @Named("SQLRepository") private val userRepository:UserRepository,
     private  val notificationServices: NotificationServices
   ) {
 

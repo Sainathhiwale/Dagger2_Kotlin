@@ -9,7 +9,7 @@ interface UserRepository {
 
 class SQLRepository : UserRepository {
     override fun saveUser(email: String, password: String) {
-        println("Saving user to database: $email, $password")
+        Log.d("SQLRepository", "saveUser:  $email, $password")
     }
 }
 
