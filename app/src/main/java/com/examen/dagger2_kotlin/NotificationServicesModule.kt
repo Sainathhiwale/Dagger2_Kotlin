@@ -4,7 +4,7 @@ import dagger.Module
 import dagger.Provides
 // provider - producer provide the dependency object to consumer through component
 @Module()
-class NotificationServicesModule {
+class NotificationServicesModule (private val retryCount:Int){
 
     @Provides
     fun provideEmailService ():NotificationServices{
@@ -14,7 +14,7 @@ class NotificationServicesModule {
     @MessageQualifier
     @Provides
     fun provideMessageServies(): NotificationServices{
-        return MessageService()
+        return MessageService(retryCount)
     }
     // @MessageQualifier In Dagger 2, the @Qualifier annotation is used to solve the problem of binding ambiguity or duplicate binding.
     /*When you have multiple modules that provide instances of the same type, Dagger 2 may encounter a situation where it doesn't know which instance to use. This is known as a binding ambiguity or duplicate binding problem.*/
