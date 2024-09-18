@@ -18,8 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
-        val component = DaggerUserRegisterationComponent.builder()
-            .notificationServicesModule(NotificationServicesModule(3)).build()
+        val component = DaggerUserRegisterationComponent.factory().create(3)
             component.injectMainActivity(this)
         userRegistrationService.registerUser("dummy@gmail.com","123456")
 
