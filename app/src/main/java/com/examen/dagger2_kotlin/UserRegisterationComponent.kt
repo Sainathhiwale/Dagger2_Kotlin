@@ -9,6 +9,7 @@ interface UserRegisterationComponent {
    // consumer
     fun injectMainActivity(activity: MainActivity)
 
+    fun getEmailService(): EmailService
     //
     @Component.Factory
     interface Factory{
