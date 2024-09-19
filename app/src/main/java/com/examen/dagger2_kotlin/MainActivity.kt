@@ -10,10 +10,8 @@ class MainActivity : AppCompatActivity() {
      @Inject
      lateinit var userRegistrationService: UserRegistrationService
      // consumer request dependency to component
-
-
-
     private lateinit var mainBinding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
